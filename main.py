@@ -105,6 +105,8 @@ def main():
         "Exporting 'merged_unique' DataFrame to '{}'...".format(output_filename)
     )
     final_dataset.to_csv(output_filename, sep=";", index=False)
+    # Reading in final_dataset.csv produces the following warning:
+    # DtypeWarning: Columns (2,4) have mixed types. Specify dtype option on import or set low_memory=False.
 
 
 if __name__ == "__main__":
